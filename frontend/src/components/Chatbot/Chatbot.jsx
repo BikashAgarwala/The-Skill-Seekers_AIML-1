@@ -59,7 +59,7 @@ function Chatbot() {
             <div className="self-center font-bold text-2xl">Healthbot</div>
           </div>
           <div className="p-2 px-12 text-[#5E5E5E]">
-            Hi <span>{localStorage.getItem('userName')}</span>! <br />I am Rabi, your personal assistant for today. Tell
+            Hi <span>{localStorage.getItem('userName')}</span>! <br />I am Sam, your personal assistant for today. Tell
             me how I can assist you and I will be glad to assist.
           </div>
         </div>

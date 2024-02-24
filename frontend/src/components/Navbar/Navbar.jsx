@@ -3,44 +3,24 @@ import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/healthyme.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import MobileSize from "./MobileSize";
-import { useAuth } from "../../contextApi/ContextApi";
-import { GoogleLogout } from "react-google-login";
-import { gapi } from "gapi-script";
-
-const clientId = "544386339743-9vsphcfv26ubqhvbv34kepfa3r64uap4.apps.googleusercontent.com";
 
 
 const Navbar = () => {
 
-  const onSuccess = () => {
-    console.log("Logout sucessfull");
-  }
-
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId : clientId ,
-        scope : ""
-      })
-    };
-    gapi.load('client:auth2' , start);
-  })
-
-
-
   const navigate = useNavigate()
-  const {isLoggedIn,setIsLoggedIn,checkAuth} = useAuth()
+  // const {isLoggedIn,setIsLoggedIn,checkAuth} = useAuth()
   const [navActive,SetNavActive] = useState(false)
-  useEffect(()=>{
-    checkAuth();
-  },[isLoggedIn])
-  const logOutHandler = () =>{
-    localStorage.removeItem("token")
-    localStorage.removeItem("userName")
-    localStorage.removeItem("userId")
-    setIsLoggedIn(false)
-    navigate('/login')
-  }
+  // useEffect(()=>{
+  //   checkAuth();
+  // },[isLoggedIn])
+  // const logOutHandler = () =>{
+  //   localStorage.removeItem("token")
+  //   localStorage.removeItem("userName")
+  //   localStorage.removeItem("userId")
+  //   setIsLoggedIn(false)
+  //   navigate('/login')
+  // }
+
   return (
     <div className="z-40 fixed top-0 left-0 h-[10vh] w-[100vw] bg-white flex justify-between shadow-md items-center px-[7vw] overflow-hidden mb-[10vh] md:mb-[10vh] lg:mb-[10vh] xl:mb-0">
       <div className="flex justify-center items-baseline gap-[10px]">
@@ -58,6 +38,7 @@ const Navbar = () => {
               Home
             </li>
           </NavLink>
+        
           <NavLink to={"/about"}>
             <li className="text-[#404040] cursor-pointer text-[17.38px] leading-[34.27px] font-[500] hover:text-black">
               About Us
@@ -68,30 +49,12 @@ const Navbar = () => {
               Chatbot
             </li>
           </NavLink>
-          <NavLink to={"/mychallenges"}>
-            <li className="text-[#404040] cursor-pointer text-[17.38px] leading-[34.27px] font-[500] hover:text-black">
-              Challenges
-            </li>
-          </NavLink>
-          <NavLink to={"/rewards"}>
-            <li className="text-[#404040] cursor-pointer text-[17.38px] leading-[34.27px] font-[500] hover:text-black">
-              Rewards
-            </li>
-          </NavLink>
-
-          {/* Google Logout */}
-{/* 
-          <div id="signOutButton">
-            <GoogleLogout
-              clientId={clientId}
-              buttonText="Sign Out"
-              onLogoutSuccess={onSuccess}
-            />
-          </div> */}
+         
+          </ul>
+          </div>
 
 
-
-          {!isLoggedIn && <NavLink to={"/login"}>
+          {/* {!isLoggedIn && <NavLink to={"/login"}>
              <li className="text-[#404040] cursor-pointer text-[17.38px] leading-[34.27px] font-[500]">
               <button
                 className="px-4 py-1 text-center text-white rounded-xl text-xl"
@@ -117,7 +80,7 @@ const Navbar = () => {
               </button>
             </li>}
         </ul>
-      </div>
+      </div> */}
       {
         navActive ? <FaTimes onClick={()=>SetNavActive(false)} className="block md:block lg:hidden xl:hidden text-lg"/>:<FaBars onClick={()=>SetNavActive(true)} className="block md:block lg:hidden xl:hidden text-lg"/>
       }
