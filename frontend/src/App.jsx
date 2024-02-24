@@ -12,7 +12,7 @@ import MainPage from './components/Chatbot/MainPage'
 function App() {
   return (
     <>
-      <div className='bg-[#F3F3FD]'>
+      <div className=''>
         <Navbar />
         <Routes>
             <Route index path='/' element={<Home/>}/>

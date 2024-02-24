@@ -3,16 +3,16 @@ import { AiOutlineAudio } from "react-icons/ai";
 import { IoSearch } from "react-icons/io5";
 import { PiImage } from "react-icons/pi"; 
 import Chatbot from './Chatbot';
-import chatbotPage from '../../assets/chatbotPage.png';
+import travel from '../../assets/travel.png';
 
 function MainPage() {
   return (
-    <div className='w-screen mt-[10vh] h-[90vh] overflow-hidden bg-[#F9F7F7]'>
+    <div className='w-screen mt-[10vh] h-[90vh] overflow-hidden bg-yellow-50'>
 
         <div className='flex justify-around w-[85vw] mx-auto'>
             <div className='h-auto w-[50%]'>
                 <div className='flex justify-around  shadow-lg rounded-3xl overflow-hidden mt-1 mb-4 '>
-                    <input className='h-16 rounded-3xl bg-[#F9F7F7] outline-none text-slate-900 text-xl' type="text" placeholder='ask me anything' />
+                    <input className='h-16 rounded-3xl bg-yellow-50 outline-none text-slate-900 text-xl' type="text" placeholder='ask me anything' />
                    
                    <div className='self-center'>
                     <button className='h-8 w-8 bg-gradient-to-tr from-[#3A8EF6] to-[#6F3AFA] outline-none self-center rounded-full mx-2'>
@@ -29,9 +29,9 @@ function MainPage() {
                 <Chatbot />
             </div>
           <div className='self-center text-5xl w-[40%] capitalize font-bold text-center leading-relaxed'>
-          Hey <span className='text-[#3A8EF6]'>{localStorage.getItem('userName')} !</span> let's talk for <span className='text-[#3A8EF6]'>your</span> better <span className='text-[#3A8EF6]'>health</span>💙
+          Hey <span className='text-yellow-500'>{localStorage.getItem('userName')} !</span> let's talk for <span className='text-yellow-500'>your</span> better <span className='text-yellow-500'>travel</span>
           
-          <img src= {chatbotPage} alt="" />
+          <img src= {travel} alt="" />
           </div>
         </div>
     </div>

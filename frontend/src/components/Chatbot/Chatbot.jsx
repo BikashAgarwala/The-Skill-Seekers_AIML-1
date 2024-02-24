@@ -52,11 +52,11 @@ function Chatbot() {
 
   return (
     <div>
-      <div className="h-[78vh] w-auto bg-[#F1F1FF] shadow-xl rounded-2xl drop-shadow-lg">
+      <div className="h-[78vh] w-auto bg-gradient-to-b from-neutral-50 to-neutral-100 shadow-xl rounded-2xl drop-shadow-lg">
         <div className="bg-white rounded-2xl">
           <div className="flex gap-4 border-b-2 p-3 px-3 py-3">
             <img src={ChatbotIcon} className="h-[50px] w-[50px]" />
-            <div className="self-center font-bold text-2xl">Healthbot</div>
+            <div className="self-center font-bold text-2xl">Travelbot</div>
           </div>
           <div className="p-2 px-12 text-[#5E5E5E]">
             Hi <span>{localStorage.getItem('userName')}</span>! <br />I am Sam, your personal assistant for today. Tell
@@ -74,8 +74,8 @@ function Chatbot() {
               <div
                 className={`${
                   message.type === "user"
-                    ? "bg-white rounded-br-none"
-                    : "bg-[#5D6EF7] text-white rounded-bl-none"
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-500 rounded-br-none text-white"
+                    : "bg-gradient-to-r from-yellow-500 to-[#D7973B] text-white rounded-bl-none"
                 } rounded-3xl p-4 max-w-[25vw] overflow-x-auto`}
               >
                 {message.type === "user" ? (
@@ -108,7 +108,7 @@ function Chatbot() {
         </div>
         {isLoading && (
           <div key={chatLog.length} className="flex justify-start">
-            <div className="bg-[#5D6EF7] rounded-3xl rounded-bl-none">
+            <div className="bg-gradient-to-r from-yellow-500 to-[#D7973B] rounded-3xl rounded-bl-none">
               <TypingAnimation />
             </div>
           </div>
