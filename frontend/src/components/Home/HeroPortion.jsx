@@ -40,7 +40,7 @@ function HeroPortion() {
                
             </div>
         </div>
-        <div className='  bg-none text-6xl text-white font-[800] tracking-wider mb-5'>
+        <div className='  bg-none text-6xl text-white font-[800] tracking-wider mb-5 flex justify-center items-center'>
         Find Next Place To Visit
         </div>
         <div className=' bg-none text-xl text-white w-[28vw] text-center mx-auto'>

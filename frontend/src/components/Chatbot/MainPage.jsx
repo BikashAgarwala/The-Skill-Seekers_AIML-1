@@ -15,13 +15,13 @@ function MainPage() {
                     <input className='h-16 rounded-3xl bg-yellow-50 outline-none text-slate-900 text-xl' type="text" placeholder='ask me anything' />
                    
                    <div className='self-center'>
-                    <button className='h-8 w-8 bg-gradient-to-tr from-[#3A8EF6] to-[#6F3AFA] outline-none self-center rounded-full mx-2'>
+                    <button className='h-8 w-8 bg-gradient-to-r from-yellow-500 to-[#D7973B] outline-none self-center rounded-full mx-2'>
                     <PiImage className='text-white text-lg w-full'/>
                     </button>
-                    <button className='h-8 w-8 bg-gradient-to-tr from-[#3A8EF6] to-[#6F3AFA] outline-none self-center rounded-full mx-2'>
+                    <button className='h-8 w-8 bg-gradient-to-r from-yellow-500 to-[#D7973B] outline-none self-center rounded-full mx-2'>
                     <AiOutlineAudio className='text-white text-lg w-full'/>
                     </button>
-                    <button className='h-8 w-8 bg-gradient-to-tr from-[#3A8EF6] to-[#6F3AFA] outline-none self-center rounded-full mx-2'>
+                    <button className='h-8 w-8 bg-gradient-to-r from-yellow-500 to-[#D7973B] outline-none self-center rounded-full mx-2'>
                     <IoSearch className='text-white text-lg w-full'/>
                     </button>
                     </div>
