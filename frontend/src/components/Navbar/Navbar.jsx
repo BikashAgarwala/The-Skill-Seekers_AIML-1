@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo1.png";
 import trvl from '../../assets/TRVL.png'
 import { FaBars, FaTimes } from "react-icons/fa";
 import MobileSize from "./MobileSize";
@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex justify-center items-center gap-[12px]">
        
         <img src={logo} alt="logo" className="h-[70px] w-auto " />
-        <img src={trvl} alt="" className="h-[20px]" />
+        {/* <img src={trvl} alt="" className="h-[20px]" /> */}
       </div>
       <div className="w-auto hidden md:hidden lg:block xl:block">
         <ul className="flex justify-center items-center gap-[47.95px]">
